@@ -8,7 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-<h1>hello</h1>
-<h2>hello</h2>
+<h1 id="header">hello</h1>
+<script>
+    const {invoke} = window.__TAURI__.tauri
+    invoke('greet', {name: 'world'})
+        .then((res) => {
+            console.log(res) // prints "hello world!"
+            window.header.innerHTML = res
+        })
+</script>
 </body>
 </html>

@@ -3,5 +3,7 @@
 ## run
 
 ```rust
-cargo tauri dev 
+cargo tauri dev
+
+cargp vendor
 ```
